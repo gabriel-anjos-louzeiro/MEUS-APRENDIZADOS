@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="CSS/suporte.css">
+</head>
+<body>
+    <form>
+        <div class="form-group">
+            <label for="nome">NOME:</label>
+            <select id="nome" name="nome">
+        
+                <option value="maria_vitoria">GABRIEL LOUZEIRO</option>
+                <option value="maria_vitoria">MAURICIO MELO</option>
+                
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="email">EMAIL:</label>
+            <select id="email" name="email">
+            <option value="gab">gabriel@grupoelmo.net</option>
+            <option value="email">mauricio@grupoelmo.net</option>
+        </select>
+        </div>
+
+        <div class="form-group">
+            <label for="urgencia">URG:</label>
+            <select id="urgencia" name="urgencia">
+                <option value="imediatamente">IMEDIATAMENTE</option>
+                <option value="pode aguardar">PODE AGUARDAR</option>
+                <option value="o quanto antes">O QUANTO ANTES</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+        </div>
+    
+        <div class="form-group">
+            <label for="status">STATUS:</label>
+            <input type="text" id="status" name="status" placeholder="PENDENTE" readonly>
+        </div>
+        <div class="form-group">
+            <label for="data">DATA:</label>
+            <input type="date" id="data" name="data" value="">
+        </div>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const dataInput = document.getElementById('data');
+                const today = new Date().toISOString().split('T')[0];
+                dataInput.value = today;
+            });
+        </script>
+        
+        
+        <div class="form-group full-width">
+            <label for="observacao">OBS:</label>
+            <textarea id="observacao" name="observacao" placeholder="Digite suas observações"></textarea>
+        </div>
+    </form>
+</body>
+</html>
